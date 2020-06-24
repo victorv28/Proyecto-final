@@ -115,16 +115,16 @@ public class SongListFragment extends Fragment implements AdapterView.OnItemClic
             ViewHolderItem viewHolder;
             if (view == null) {
 
-                // Inflate the view
+
                 LayoutInflater inflater = getActivity().getLayoutInflater();
                 view = inflater.inflate(R.layout.list_item_song, viewGroup, false);
-                //Set up the View Holder
+
                 viewHolder = new ViewHolderItem();
                 viewHolder.imageHolder = view.findViewById(R.id.ivListItem);
                 viewHolder.titleHolder = view.findViewById(R.id.tvSongTitle_ListItem);
                 viewHolder.artistHolder = view.findViewById(R.id.tvArtist_ListItem);
                 viewHolder.durationHolder = view.findViewById(R.id.tvDuration);
-                //Store the holder with the view
+
                 view.setTag(viewHolder);
             } else {
 
