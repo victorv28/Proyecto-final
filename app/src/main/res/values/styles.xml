@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:fastScrollOverlayPosition">atThumb</item>-->
+        <!--<item name="android:fastScrollTextColor">#ffffffff</item>-->
+        <!--<item name="android:fastScrollPreviewBackgroundRight">@android:color/holo_blue_dark</item>-->
+    </style>
+
+</resources>

@@ -1,0 +1,255 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="30"
+        android:background="#ff000000"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bBrowse"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/tvAlbum_TitleFrag"
+            android:layout_alignBottom="@+id/tvAlbum_TitleFrag"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/custom_store" />
+
+        <Button
+            android:id="@+id/bVolume"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignBaseline="@+id/tvAlbum_TitleFrag"
+            android:layout_alignBottom="@+id/tvAlbum_TitleFrag"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_volume" />
+
+        <TextView
+            android:id="@+id/tvSongTitle_TitleFrag"
+            android:gravity="center"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/tvAlbum_TitleFrag"
+            android:gravity="center"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_below="@+id/tvSongTitle_TitleFrag"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:id="@+id/tvArtist_TitleFrag"
+            android:gravity="center"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_below="@+id/tvAlbum_TitleFrag"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffffff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tvArtist_TitleFrag"
+            android:background="#ffffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="130"
+        android:background="#ff000000"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivAlbumArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:contentDescription="Album Art"
+            android:scaleType="fitXY"
+            android:src="@drawable/splash" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="#55000000"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvElapsed"
+                android:textStyle="bold"
+                android:shadowRadius="25"
+                android:textSize="17sp"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowColor="#ffcccccc"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_bright"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="60"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:shadowRadius="25"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowColor="#ff000000"
+                    android:text=" 000 of 999 "
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:id="@+id/tvIndex" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:shadowRadius="25"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowColor="#ff000000"
+                    android:textColor="#fff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDuration_Player"
+                    android:text=" 99:99 " />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRemaining"
+                android:shadowRadius="25"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowColor="#ffcccccc"
+                android:layout_width="0dp"
+                android:textSize="17sp"
+                android:layout_weight="20"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:text="99:99"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_bright"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="40"
+        android:background="#ff000000"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/sbTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/tbShuf"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/custom_shuffle"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <Button
+                android:id="@+id/bPrev"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_previous" />
+
+            <Button
+                android:id="@+id/bPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_pause" />
+
+            <Button
+                android:id="@+id/bNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_next" />
+
+            <ToggleButton
+                android:id="@+id/tbRep"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/custom_repeat"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
